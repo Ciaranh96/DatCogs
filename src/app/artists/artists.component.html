@@ -1,0 +1,17 @@
+<h2>My Artists</h2>
+<h3>{{artist.name | uppercase}} Details</h3>
+<div>
+  <span>id:</span>
+  {{artist.id}}
+</div>
+<div>
+  <span>name:</span>
+  {{artist.name}}
+</div>
+<ul class="artists">
+  <li *ngFor="let artist of artists">
+    <a routerLink="/detail/{{artist.id}}">
+      <span class="badge">{{artist.id}}</span> {{artist.name}}
+    </a>
+  </li>
+</ul>
